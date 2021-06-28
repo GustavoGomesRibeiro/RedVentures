@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Chamando CSS  -->
+    <link rel="stylesheet" href="../assets/styles/index.scss" />
+    <title>Challenge Red Ventures</title>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='header'>
+            <div class='left-leaves'></div>
+            <div class='content-header'>
+                <!-- <img src="../assets/img/logo.png" alt='logo'> -->
+                <h2>green thumb.</h2>
+                <h1>Find your next green friend</h1>
+                <div class='arrow-down'>
+                    <img src="../assets/images/icons/arrow-down.svg">
+                </div>
+            </div>
+            <!-- </div> -->
+            <div class='plantperson'></div>
+            <div class='right-leaves'></div>
+        </div>
+
+        <div class="container-main">
+            <div class="content-type-plant">
+                <div class="type-plant">
+                    <div class="content-options">
+                        <div class='sun'></div>
+                    </div>
+
+                    <div class="text">
+                        <p>1. Set amount of sunlight your plant will get.</p>
+                    </div>
+
+                    <select class="select" id='sun' onchange="getValue()">
+                        <option value="" selected data-default>Select...</option>
+                        <option value="high">high</option>
+                        <option value="low">low</option>
+                        <option value="no">no</option>
+                    </select>
+                </div>
+                <div class="type-plant">
+                    <div class="content-options">
+                        <div class='water'></div>
+                    </div>
+                    <div class="text">
+                        <p>2. How often do you want to water your plant?</p>
+                    </div>
+                    <select class="select" id='water' onchange="getValue()">
+                        <option value="" selected data-default>Select...</option>
+                        <option value="daily">daily</option>
+                        <option value="regularly">regularly</option>
+                        <option value="rarely">rarely</option>
+                    </select>
+                </div>
+                <div class="type-plant">
+                    <div class="content-options">
+                        <div class='pet'></div>
+                    </div>
+                    <div class="text">
+                        <p>3. Do you have pets? Dou they chew plants?</p>
+                    </div>
+                    <select class="select" id='pets' onchange="getValue()">
+                        <option value="" selected data-default>Select...</option>
+                        <option value="false">false</option>
+                        <option value="true">true</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-footer">
+            <div class='content-result'>
+                <div class='description-no-results'>
+                    <h1>No results yet...</h1>
+                    <p>Use the filters above to find the plant that best fits your envirtonment :)</p>
+                </div>
+                <div class="no-results"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Consumo da API -->
+    <script>
+        function getValue() {
+            const sun = document.getElementById("sun").value;
+            const water = document.getElementById("water").value;
+            const pets = document.getElementById("pets").value;
+            const url = "https://front-br-challenges.web.app/api/v2/green-thumb/";
+            let config = {
+                method: "GET",
+                url: `${url}?sun=${sun}&water=${water}&pets=${pets}`,
+            };
+            $.ajax({
+                url: config.url,
+            }).done((data) => {
+                let results = "";
+                data.forEach((element) => {
+                    results += `<div class="plant">
+                                        <img src="${element.url}" class='imgPlant' />
+
+                                        <div class="background">
+                                          <p class='name'>${element.name}</p>
+                                          <div class='container-details'>
+                                            <p class='price'>$${element.price}</p>
+                                            <div class="pet-svg"></div>
+                                            <div class="water-svg"></div>
+                                            <div class="sun-svg"></div>
+                                          </div>
+                                        </div>
+                                    </div>`;
+                });
+                $(".container-footer").html(`
+                    <div class='container-plant'>
+                        <div class='content-our-picks'>
+                            <div class="pick"></div>
+                            <h1>Our picks for you</h1>
+                        </div>
+                    </div>
+                    <div class="container-result-plant">${results}</div>
+                        <div class="back-to-the-top">
+                            <div class="content-text">
+                                <div class="text-back-to-the-top"> Back to the top</div>
+                            </div>
+                        </div>
+                `);
+            });
+        }
+    </script>
+</body>
+
+</html>

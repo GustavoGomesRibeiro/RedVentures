@@ -1,0 +1,476 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background: #f2f2f2;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 500px;
+  left: 0px;
+  top: 0px;
+  background: #75bc97;
+}
+
+.content-header {
+  margin-left: 18%;
+  padding-top: 50px;
+}
+
+.content-header h2 {
+  position: absolute;
+  width: 209px;
+  height: 25px;
+  left: 288px;
+  top: 57px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.content-header h1 {
+  position: absolute;
+  width: 400px;
+  height: 252px;
+  left: 288px;
+  top: 124px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 85px;
+  color: #ffffff;
+}
+
+.arrow-down {
+  position: absolute;
+  width: 35px;
+  height: 39px;
+  left: 291px;
+  top: 407px;
+}
+
+.left-leaves {
+  background-image: url(../images/hero/desktop/left-leaves.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  width: 862px;
+  height: 500px;
+  left: 0px;
+  top: 0px;
+}
+
+.plantperson {
+  background-image: url(../images/hero/desktop/plantperson.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  width: 335px;
+  height: 428px;
+  left: 800px;
+  top: 36px;
+  margin-left: 300px;
+}
+.right-leaves {
+  background-image: url(../images/hero/desktop/right-leaves.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  width: 361px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.container-main {
+  position: absolute;
+  width: 100%;
+  //   height: 350px;
+  //   left: -5px;
+  top: 500px;
+  background: #ffffff;
+}
+
+.content-type-plant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-plant {
+  margin-top: 100px;
+  position: relative;
+  width: 221px;
+  height: 316px;
+  padding-left: 50px;
+}
+
+.content-options {
+  height: 40%;
+}
+
+.sun {
+  background-image: url(../images/illustrations/sun.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: 100px;
+}
+
+.water {
+  background-image: url(../images/illustrations/wateringcan.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: 100px;
+}
+
+.pet {
+  background-image: url(../images/illustrations/dog.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: 100px;
+}
+
+.text {
+  margin-bottom: 15px;
+  left: 0.9%;
+  right: 0%;
+  top: calc(50% - 44px / 2 - 55px);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  color: #848484;
+}
+
+.select {
+  border-radius: 19px;
+  padding: 10px;
+  border: 1px solid #a8a8a8;
+  box-sizing: border-box;
+}
+
+select option[data-default] {
+  color: #888;
+}
+
+.container-footer {
+  position: absolute;
+  top: 1000px;
+  display: flex;
+  background: #f2f2f2;
+  flex-direction: column;
+}
+
+.content-result {
+  display: flex;
+  position: relative;
+  z-index: 1;
+  height: 312px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  width: 1000px;
+}
+
+.description-no-results {
+  margin-left: 12%;
+}
+
+.description-no-results h1 {
+  width: 442px;
+  height: 54px;
+  left: 290px;
+  top: 735px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+  color: #a9a9a9;
+}
+
+.description-no-results p {
+  margin-left: 16%;
+  text-align: initial;
+  width: 219px;
+  height: 81px;
+  left: 292px;
+  top: 802px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 27px;
+  color: #a9a9a9;
+}
+
+.no-results {
+  background-image: url(../images/illustrations/no-results.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100px;
+  background-size: 100px;
+  margin-left: 100px;
+}
+
+.container-plant {
+  background: none;
+}
+
+.plant {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgPlant {
+  align-items: center;
+  width: 150px;
+  left: 18.28%;
+  right: 18.28%;
+  top: 7.04%;
+  bottom: 33.1%;
+}
+
+.background {
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+}
+
+.container-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  height: 28px;
+  left: 11.94%;
+  top: calc(50% - 28px / 2 + 65px);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #1e6b4e;
+}
+.price {
+  height: 28px;
+  left: 11.94%;
+  top: calc(50% - 28px / 2 + 90px);
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1e6b4e;
+}
+
+.content-our-picks {
+  margin-left: 85px;
+}
+.content-our-picks h1 {
+  width: 517px;
+  height: 66px;
+  left: 271px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+  color: #0c261c;
+}
+
+.container-result-plant {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+  margin-left: 5%;
+}
+
+.pick {
+  background-image: url(../images/illustrations/pick.png);
+  background-repeat: no-repeat;
+  height: 100px;
+  background-size: 200px;
+}
+.pet-svg {
+  background-image: url(../images/icons/pet.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  background-size: 30px;
+  background-position: center;
+}
+.water-svg {
+  background-image: url(../images/icons/2-drops.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  background-size: 30px;
+  background-position: center;
+}
+.sun-svg {
+  background-image: url(../images/icons/low-sun.svg);
+  background-repeat: no-repeat;
+  width: 100px;
+  background-size: 30px;
+  background-position: center;
+}
+
+.back-to-the-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-back-to-the-top {
+  position: absolute;
+  height: 19px;
+  left: 43%;
+  right: 43.11%;
+  top: calc(50% - 19px / 2 + 0.5px);
+  font-family: Montserrat;
+  color: #196146;
+}
+
+.content-text {
+  position: absolute;
+  border: 1px solid #15573f;
+  box-sizing: border-box;
+  border-radius: 25px;
+  height: 40px;
+  margin-top: 50px;
+  width: 100%;
+  margin-left: 100px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .header {
+    position: absolute;
+    width: 320px;
+    height: 593px;
+    left: 0px;
+    top: -1px;
+  }
+
+  .right-leaves {
+    background-image: none;
+  }
+  .left-leaves {
+    transform: rotate(180deg);
+    background-image: url(../images/hero/desktop/left-leaves.png);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+    width: 862px;
+    height: 500px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .container-main {
+    position: absolute;
+    top: 500px;
+    background: #ffffff;
+    width: 1349px;
+  }
+
+  .content-type-plant {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 450px;
+  }
+
+  .type-plant {
+    margin-top: 10px;
+  }
+
+  .container-footer {
+    position: absolute;
+    top: 1500px;
+    display: flex;
+    background: #f2f2f2;
+    flex-direction: column;
+  }
+
+  .select {
+    border-radius: 19px;
+    padding: 10px;
+    border: 1px solid #a8a8a8;
+    box-sizing: border-box;
+    width: 200px;
+  }
+
+  .content-result {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    height: 312px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    width: 1000px;
+    margin-left: 250px;
+  }
+
+  .content-our-picks {
+    position: absolute;
+    margin-left: 85px;
+    left: 500px;
+  }
+
+  .container-result-plant {
+    grid-gap: 10px;
+    padding: 10px;
+    margin-left: 39%;
+    margin-top: 188px;
+    overflow-x: scroll;
+  }
+
+  .content-text {
+    position: absolute;
+    border: 1px solid #15573f;
+    box-sizing: border-box;
+    border-radius: 25px;
+    height: 40px;
+    margin-top: 50px;
+    width: 50%;
+    margin-left: 500px;
+  }
+}
